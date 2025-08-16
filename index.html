@@ -1,568 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RestroRelief - Restaurant</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body data-spy="scroll" data-target="#navbarContent" data-offset="100">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="./Assets/port.png" height="80" width="80">
-        <span class="brand-name">RestroRelief</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-       <ul class="navbar-nav ml-auto align-items-lg-center text-center">
-  <li class="nav-item mx-2">
-    <a class="nav-link" href="#home" data-toggle="collapse" data-target="#navbarContent">HOME</a>
-  </li>
-  <li class="nav-item mx-2">
-    <a class="nav-link" href="#menu" data-toggle="collapse" data-target="#navbarContent">MENU</a>
-  </li>
-  <li class="nav-item mx-2">
-    <a class="nav-link" href="#services" data-toggle="collapse" data-target="#navbarContent">SERVICE</a>
-  </li>
-  <li class="nav-item mx-2">
-    <a class="nav-link" href="#about" data-toggle="collapse" data-target="#navbarContent">ABOUT</a>
-  </li>
-  <li class="nav-item mx-2">
-    <a class="nav-link" href="#contact" data-toggle="collapse" data-target="#navbarContent">CONTACT</a>
-  </li>
-  <li class="nav-item mx-2">
-    <a href="#booking" class="btn my-btn font-weight-bold" data-toggle="collapse" data-target="#navbarContent">BOOK TABLE</a>
-  </li>
-</ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home" class="home-section pt-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-1 order-md-1 text-center text-md-left">
-          <h1>Enjoy Our <br> Delicious Meal</h1>
-          <p class="home-title">
-            More than just food, we serve comfort, care, and a touch of love in every bite.<br>
-            Your satisfaction is our favorite ingredient.<br>
-            Thank you for choosing us to be part of your day.
-          </p>
-          <a href="#booking" class="btn my-btn mt-3 mb-4">BOOK TABLE</a>
-        </div>
-        <div class="col-md-6 order-2 order-md-2 text-center">
-          <img src="./Assets/dish.png" alt="Dish" class="dish-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu Section -->
-  <section id="menu" class="menu-section py-5">
-    <div class="container">
-      <h2 class="text-center mb-3">Our Menu</h2>
-      <h4 class="font-weight-bold text-center">"We don't just serve meals, we serve moments."</h4>
-      <p style="font-size: 20px;" class="text-center">"More than a meal — it's a memory in the making."</p>
-
-      <div class="menu-tabs text-center my-3 d-flex flex-wrap justify-content-center gap-4">
-        <button class="tab active" onclick="showMenu('breakfast')">
-          <i class="fas fa-mug-hot"></i> Popular Breakfast</button>
-        <button class="tab" onclick="showMenu('lunch')">
-          <i class="fas fa-hamburger"></i> Special Lunch</button>
-        <button class="tab" onclick="showMenu('dinner')"> 
-          <i class="fas fa-utensils"></i> Lovely Dinner</button>
-        <button class="tab" onclick="showMenu('desserts')"> 
-          <i class="fas fa-cookie"></i>Sweet Desserts</button>
-        <button class="tab" onclick="showMenu('drink')"> 
-          <i class="fas fa-cocktail"></i>Chill Drinks</button>
-      </div>
-
-      <div id="menu-items">
-        <!-- Breakfast -->
-     <div class="menu-category" id="breakfast">
-     <div class="row ">
-    <!-- Left Column -->
-    <div class="col-md-6 animate-left">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src=".\Assets\idli.png" >
-        <div class="ml-3">
-          <h5>Idli Sambhar</h5>
-          <p>Soft steamed rice cakes with sambhar.</p>
-        </div>
-        <div class="ml-auto price">₹60</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src=".\Assets\poha.png">
-        <div class="ml-3">
-          <h5>Poha</h5>
-          <p>Flattened rice with peanuts & spices.</p>
-        </div>
-        <div class="ml-auto price">₹40</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/aloo paratha.png" >
-        <div class="ml-3">
-          <h5>Aloo Paratha</h5>
-          <p>Stuffed bread with potato filling.</p>
-        </div>
-        <div class="ml-auto price">₹50</div>
-      </div>
-    </div>
-
-    <!-- Right Column -->
-    <div class="col-md-6 animate-right">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src=".\Assets\noodles.png" >
-        <div class="ml-3">
-          <h5>Noodles</h5>
-          <p>Spicy and yuppie Noodles.</p>
-        </div>
-        <div class="ml-auto price">₹45</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src=".\Assets\dosa5.png">
-        <div class="ml-3">
-          <h5>Masala Dosa</h5>
-          <p>Crispy rice crepe with potato filling.</p>
-        </div>
-        <div class="ml-auto price">₹80</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/sandwh.png" >
-        <div class="ml-3">
-          <h5>Veg Sandwich</h5>
-          <p>Grilled sandwich with fresh veggies.</p>
-        </div>
-        <div class="ml-auto price">₹55</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        <!-- Lunch -->
-    <div class="menu-category d-none" id="lunch">
-  <div class="row">
-    <!-- LEFT COLUMN -->
-    <div class="col-md-6 animate-left">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/rajma.png">
-        <div class="ml-3">
-          <h5>Rajma Chawal</h5>
-          <p>Kidney beans curry with rice.</p>
-        </div>
-        <div class="ml-auto price">₹120</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/thali.png" >
-        <div class="ml-3">
-          <h5>Veg Thali</h5>
-          <p>Full meal with roti, sabzi, dal & dessert.</p>
-        </div>
-        <div class="ml-auto price">₹180</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/veg biryani.png">
-        <div class="ml-3">
-          <h5>Veg Biryani</h5>
-          <p>Spicy rice with vegetables and masala.</p>
-        </div>
-        <div class="ml-auto price">₹130</div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="col-md-6 animate-right">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/momo.png" >
-        <div class="ml-3">
-          <h5>Momos</h5>
-          <p>"Steamed dumplings packed with spicy flavors, served with a fiery chutney."</p>
-        </div>
-        <div class="ml-auto price">₹160</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/bhtuee.png" >
-        <div class="ml-3">
-          <h5>Chole Bhature</h5>
-          <p>Spicy chickpeas with fluffy fried bread.</p>
-        </div>
-        <div class="ml-auto price">₹110</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/bhaji.png" >
-        <div class="ml-3">
-          <h5>Pav Bhaji</h5>
-          <p>PaV With spicy gravy .</p>
-        </div>
-        <div class="ml-auto price">₹140</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        <!-- Dinner -->
-     <div class="menu-category d-none" id="dinner">
-     <div class="row">
-    <!-- LEFT COLUMN -->
-    <div class="col-md-6 animate-left">
-    <div class="menu-item d-flex align-items-center mb-4">
-    <img src="./Assets/paneer.png" >
-        <div class="ml-3">
-           <h5>Paneer Butter Masala</h5>
-          <p>Creamy curry served with naan or rice.</p>
-        </div>
-        <div class="ml-auto price">₹110</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/thali.png" >
-        <div class="ml-3">
-          <h5>Veg Thali</h5>
-          <p>Full meal with roti, sabzi, dal & dessert.</p>
-        </div>
-        <div class="ml-auto price">₹40</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/kulcha.png" >
-        <div class="ml-3">
-          <h5>Chola Kulcha</h5>
-          <p>"Soft kulchas served with spicy, tangy chole for the perfect North Indian delight.<p>
-        </div>
-        <div class="ml-auto price">₹150</div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="col-md-6 animate-right">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/rice.avif">
-        <div class="ml-3">
-          <h5>Veg Fried Rice With Manchurian</h5>
-          <p>Chinese-style rice with veggies and soy.</p>
-        </div>
-        <div class="ml-auto price">₹150</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/hakka.png" >
-        <div class="ml-3">
-          <h5>Hakka Noodles</h5>
-          <p>Spicy stir-fried noodles with sauces.</p>
-        </div>
-        <div class="ml-auto price">₹95</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/dal and rice.png">
-        <div class="ml-3">
-          <h5>Dal and Rice</h5>
-          <p>"Comforting yellow dal served with steamed basmati rice - a simple yet soulful meal.".</p>
-        </div>
-        <div class="ml-auto price">₹50</div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-              <!-- Desserts -->
-<div class="menu-category d-none" id="desserts">
-  <div class="row">
-    <!-- LEFT COLUMN -->
-    <div class="col-md-6 animate-left">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/jamun.png">
-        <div class="ml-3">
-          <h5>Gulab Jamun</h5>
-          <p>Soft and sweet milk-solid balls soaked in syrup.</p>
-        </div>
-        <div class="ml-auto price">₹60</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/rasgulla.png">
-        <div class="ml-3">
-          <h5>Rasgulla</h5>
-          <p>Spongy white balls dipped in sugary syrup.</p>
-        </div>
-        <div class="ml-auto price">₹50</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/cream.png">
-        <div class="ml-3">
-          <h5>Ice Cream</h5>
-          <p>Chilled scoop of your favorite flavor.</p>
-        </div>
-        <div class="ml-auto price">₹30</div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="col-md-6 animate-right">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/cake.png">
-        <div class="ml-3">
-          <h5>Choco Lava Cake</h5>
-          <p>Rich layered cake with creamy chocolate frosting.</p>
-        </div>
-        <div class="ml-auto price">₹70</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/kulfi.png">
-        <div class="ml-3">
-          <h5>Kulfi</h5>
-          <p>Traditional Indian ice cream in malai or pista flavors.</p>
-        </div>
-        <div class="ml-auto price">₹50</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/rasmala.png">
-        <div class="ml-3">
-          <h5>Rasmalai</h5>
-          <p>"Soft cottage cheese discs soaked in rich saffron-infused milk,topped with nuts."p>
-        </div>
-        <div class="ml-auto price">₹100</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Drinks -->
-    <div class="menu-category d-none" id="drink">
-    <div class="row">
-    <!-- LEFT COLUMN -->
-    <div class="col-md-6 animate-left">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/lassi.png">
-        <div class="ml-3">
-          <h5>Sweet Lassi</h5>
-          <p>Refreshing yogurt-based drink with sugar.</p>
-        </div>
-        <div class="ml-auto price">₹45</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/falooda.png">
-        <div class="ml-3">
-          <h5>Falooda</h5>
-          <p>Citrus blend perfect for summer thirst.</p>
-        </div>
-        <div class="ml-auto price">₹70</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/mango.png">
-        <div class="ml-3">
-          <h5>Mango Shake</h5>
-          <p>Chilled shake made from real mango pulp.</p>
-        </div>
-        <div class="ml-auto price">₹60</div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="col-md-6 animate-right">
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/cofee.png">
-        <div class="ml-3">
-          <h5>Cold Coffee</h5>
-          <p>Iced coffee with creamy milk & a shot of espresso.</p>
-        </div>
-        <div class="ml-auto price">₹70</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/cpacinnoo.png">
-        <div class="ml-3">
-          <h5>Cappuccino</h5>
-          <p>"A rich espresso topped with frothy steamed milk and a dusting of cocoa."</p>
-        </div>
-        <div class="ml-auto price">₹25</div>
-      </div>
-
-      <div class="menu-item d-flex align-items-center mb-4">
-        <img src="./Assets/chai.png">
-        <div class="ml-3">
-          <h5>Masala Chai</h5>
-          <p>Spiced Indian tea with milk and sugar.</p>
-        </div>
-        <div class="ml-auto price">₹20</div>
-      </div>
-    </div>
-  </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
- <section class="py-5 bg-light" id="services">
-  <div class="container">
-    <h2 class="text-center mb-5 font-weight-bold " style="font-size: 40px;">Our Services</h2>
-    <div class="row">
-
-      <!-- Service Card -->
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card text-center shadow-sm p-4 h-100 service-card">
-          <i class="fas fa-user-tie fa-3x text-warning mb-3"></i>
-          <h5 class="font-weight-bold">Master Chefs</h5>
-          <p class="text-muted">Our expert chefs craft unforgettable dishes with passion and perfection.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestroRelief - Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-spy="scroll" data-target="#navbarContent" data-offset="100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img src="./Assets/port.png" height="80" width="80" />
+          <span class="brand-name">RestroRelief</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto align-items-lg-center text-center">
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="#home"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="#menu"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >MENU</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="#services"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >SERVICE</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="#about"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >ABOUT</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="#contact"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >CONTACT</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                href="#booking"
+                class="btn my-btn font-weight-bold"
+                data-toggle="collapse"
+                data-target="#navbarContent.show"
+                >BOOK TABLE</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card text-center shadow-sm p-4 h-100 service-card">
-          <i class="fas fa-utensils fa-3x text-warning mb-3"></i>
-          <h5 class="font-weight-bold">Quality Food</h5>
-          <p class="text-muted">We serve fresh, hygienic, and top-quality food for every taste.</p>
+    <!-- Home Section -->
+    <section id="home" class="home-section pt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-1 order-md-1 text-center text-md-left">
+            <h1>
+              Enjoy Our <br />
+              Delicious Meal
+            </h1>
+            <p class="home-title">
+              More than just food, we serve comfort, care, and a touch of love
+              in every bite.<br />
+              Your satisfaction is our favorite ingredient.<br />
+              Thank you for choosing us to be part of your day.
+            </p>
+            <a href="#booking" class="btn my-btn mt-3 mb-4">BOOK TABLE</a>
+          </div>
+          <div class="col-md-6 order-2 order-md-2 text-center">
+            <img src="./Assets/dish.png" alt="Dish" class="dish-img" />
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card text-center shadow-sm p-4 h-100 service-card">
-          <i class="fas fa-shopping-cart fa-3x text-warning mb-3"></i>
-          <h5 class="font-weight-bold">Online Order</h5>
-          <p class="text-muted">Order your favorite meals online and enjoy doorstep delivery.</p>
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Our Menu</h2>
+        <h4 class="font-weight-bold text-center">
+          "We don't just serve meals, we serve moments."
+        </h4>
+        <p style="font-size: 20px" class="text-center">
+          "More than a meal — it's a memory in the making."
+        </p>
+
+        <div
+          class="menu-tabs text-center my-3 d-flex flex-wrap justify-content-center gap-4"
+        >
+          <button
+            class="tab btn active"
+            data-toggle="tab"
+            data-target="#breakfast"
+          >
+            <i class="fas fa-mug-hot"></i> Popular Breakfast
+          </button>
+          <button class="tab btn" data-toggle="tab" data-target="#lunch">
+            <i class="fas fa-hamburger"></i> Special Lunch
+          </button>
+          <button class="tab btn" data-toggle="tab" data-target="#dinner">
+            <i class="fas fa-utensils"></i> Lovely Dinner
+          </button>
+          <button class="tab btn" data-toggle="tab" data-target="#desserts">
+            <i class="fas fa-cookie"></i> Sweet Desserts
+          </button>
+          <button class="tab btn" data-toggle="tab" data-target="#drink">
+            <i class="fas fa-cocktail"></i> Chill Drinks
+          </button>
         </div>
-      </div>
 
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card text-center shadow-sm p-4 h-100 service-card">
-          <i class="fas fa-headset fa-3x text-warning mb-3"></i>
-          <h5 class="font-weight-bold">24/7 Service</h5>
-          <p class="text-muted">We are here round the clock to serve you with the best service.</p>
+        <div id="menu-items">
+          <!-- Breakfast -->
+          <div class="menu-category" id="breakfast">
+            <div class="row">
+              <!-- Left Column -->
+              <div class="col-md-6 animate-left">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src=".\Assets\idli.png" />
+                  <div class="ml-3">
+                    <h5>Idli Sambhar</h5>
+                    <p>Soft steamed rice cakes with sambhar.</p>
+                  </div>
+                  <div class="ml-auto price">₹60</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src=".\Assets\poha.png" />
+                  <div class="ml-3">
+                    <h5>Poha</h5>
+                    <p>Flattened rice with peanuts & spices.</p>
+                  </div>
+                  <div class="ml-auto price">₹40</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/aloo paratha.png" />
+                  <div class="ml-3">
+                    <h5>Aloo Paratha</h5>
+                    <p>Stuffed bread with potato filling.</p>
+                  </div>
+                  <div class="ml-auto price">₹50</div>
+                </div>
+              </div>
+
+              <!-- Right Column -->
+              <div class="col-md-6 animate-right">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src=".\Assets\noodles.png" />
+                  <div class="ml-3">
+                    <h5>Noodles</h5>
+                    <p>Spicy and yuppie Noodles.</p>
+                  </div>
+                  <div class="ml-auto price">₹45</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src=".\Assets\dosa5.png" />
+                  <div class="ml-3">
+                    <h5>Masala Dosa</h5>
+                    <p>Crispy rice crepe with potato filling.</p>
+                  </div>
+                  <div class="ml-auto price">₹80</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/sandwh.png" />
+                  <div class="ml-3">
+                    <h5>Veg Sandwich</h5>
+                    <p>Grilled sandwich with fresh veggies.</p>
+                  </div>
+                  <div class="ml-auto price">₹55</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lunch -->
+          <div class="menu-category d-none" id="lunch">
+            <div class="row">
+              <!-- LEFT COLUMN -->
+              <div class="col-md-6 animate-left">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/rajma.png" />
+                  <div class="ml-3">
+                    <h5>Rajma Chawal</h5>
+                    <p>Kidney beans curry with rice.</p>
+                  </div>
+                  <div class="ml-auto price">₹120</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/thali.png" />
+                  <div class="ml-3">
+                    <h5>Veg Thali</h5>
+                    <p>Full meal with roti, sabzi, dal & dessert.</p>
+                  </div>
+                  <div class="ml-auto price">₹180</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/veg biryani.png" />
+                  <div class="ml-3">
+                    <h5>Veg Biryani</h5>
+                    <p>Spicy rice with vegetables and masala.</p>
+                  </div>
+                  <div class="ml-auto price">₹130</div>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN -->
+              <div class="col-md-6 animate-right">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/momo.png" />
+                  <div class="ml-3">
+                    <h5>Momos</h5>
+                    <p>
+                      "Steamed dumplings packed with spicy flavors, served with
+                      a fiery chutney."
+                    </p>
+                  </div>
+                  <div class="ml-auto price">₹160</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/bhtuee.png" />
+                  <div class="ml-3">
+                    <h5>Chole Bhature</h5>
+                    <p>Spicy chickpeas with fluffy fried bread.</p>
+                  </div>
+                  <div class="ml-auto price">₹110</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/bhaji.png" />
+                  <div class="ml-3">
+                    <h5>Pav Bhaji</h5>
+                    <p>PaV With spicy gravy .</p>
+                  </div>
+                  <div class="ml-auto price">₹140</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dinner -->
+          <div class="menu-category d-none" id="dinner">
+            <div class="row">
+              <!-- LEFT COLUMN -->
+              <div class="col-md-6 animate-left">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/paneer.png" />
+                  <div class="ml-3">
+                    <h5>Paneer Butter Masala</h5>
+                    <p>Creamy curry served with naan or rice.</p>
+                  </div>
+                  <div class="ml-auto price">₹110</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/thali.png" />
+                  <div class="ml-3">
+                    <h5>Veg Thali</h5>
+                    <p>Full meal with roti, sabzi, dal & dessert.</p>
+                  </div>
+                  <div class="ml-auto price">₹40</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/kulcha.png" />
+                  <div class="ml-3">
+                    <h5>Chola Kulcha</h5>
+                    <p>
+                      "Soft kulchas served with spicy, tangy chole for the
+                      perfect North Indian delight.
+                    </p>
+                    <p></p>
+                  </div>
+
+                  <div class="ml-auto price">₹150</div>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN -->
+              <div class="col-md-6 animate-right">
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/rice.avif" />
+                  <div class="ml-3">
+                    <h5>Veg Fried Rice With Manchurian</h5>
+                    <p>Chinese-style rice with veggies and soy.</p>
+                  </div>
+                  <div class="ml-auto price">₹150</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/hakka.png" />
+                  <div class="ml-3">
+                    <h5>Hakka Noodles</h5>
+                    <p>Spicy stir-fried noodles with sauces.</p>
+                  </div>
+                  <div class="ml-auto price">₹95</div>
+                </div>
+
+                <div class="menu-item d-flex align-items-center mb-4">
+                  <img src="./Assets/dal and rice.png" />
+                  <div class="ml-3">
+                    <h5>Dal and Rice</h5>
+                    <p>
+                      "Comforting yellow dal served with steamed basmati rice -
+                      a simple yet soulful meal.".
+                    </p>
+                  </div>
+                  <div class="ml-auto price">₹50</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- About Section -->
-  <section id="about" class="about-section py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Left Images -->
-        <div class="col-md-6 mb-4 mb-md-0">
+        <!-- Desserts -->
+        <div class="menu-category d-none" id="desserts">
           <div class="row">
-            <div class="col-6 pr-2">
-              <img src="./Assets/dining1.jpeg" class="img-fluid mb-3" />
-              <img src="./Assets/person1.jpg" class="img-fluid" />
+            <!-- LEFT COLUMN -->
+            <div class="col-md-6 animate-left">
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/jamun.png" />
+                <div class="ml-3">
+                  <h5>Gulab Jamun</h5>
+                  <p>Soft and sweet milk-solid balls soaked in syrup.</p>
+                </div>
+                <div class="ml-auto price">₹60</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/rasgulla.png" />
+                <div class="ml-3">
+                  <h5>Rasgulla</h5>
+                  <p>Spongy white balls dipped in sugary syrup.</p>
+                </div>
+                <div class="ml-auto price">₹50</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/cream.png" />
+                <div class="ml-3">
+                  <h5>Ice Cream</h5>
+                  <p>Chilled scoop of your favorite flavor.</p>
+                </div>
+                <div class="ml-auto price">₹30</div>
+              </div>
             </div>
-            <div class="col-6 pl-2">
-              <img src="./Assets/dining2.jpeg" class="img-fluid mb-3" />
-              <img src="./Assets/person2.jpg" class="img-fluid" />
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-md-6 animate-right">
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/cake.png" />
+                <div class="ml-3">
+                  <h5>Choco Lava Cake</h5>
+                  <p>Rich layered cake with creamy chocolate frosting.</p>
+                </div>
+                <div class="ml-auto price">₹70</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/kulfi.png" />
+                <div class="ml-3">
+                  <h5>Kulfi</h5>
+                  <p>Traditional Indian ice cream in malai or pista flavors.</p>
+                </div>
+                <div class="ml-auto price">₹50</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/rasmala.png" />
+                <div class="ml-3">
+                  <h5>Rasmalai</h5>
+                  <p>
+                    "Soft cottage cheese discs soaked in rich saffron-infused
+                    milk,topped with nuts."p>
+                  </p>
+                </div>
+
+                <div class="ml-auto price">₹100</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Content -->
-        <div class="col-md-6">
-          <h5 class="text-warning" style="font-size: 25px;">About Us</h5>
-          <h2 class="font-weight-bold mb-4">Welcome to <i class="fas fa-utensils text-warning"></i> RestroRelief</h2>
-          <p class="text-muted">
-              At RestroRelief, we believe food is more than just a meal — it's a heartfelt experience. From the moment you walk through our doors, you're not just a guest; you're family.
-              Our chefs craft every dish with passion, using the finest ingredients and traditional flavors to create memories that linger long after the last bite.
-          </p>
-          <p class="text-muted">
-             Whether it's a cozy breakfast, a joyful family dinner, or a special celebration, RestroRelief is your comforting escape where taste meets tradition.
-          </p>
-          <div class="row mt-4">
-            <div class="col-6">
-              <h3 class="text-warning font-weight-bold">15</h3>
-              <p>Years of <strong>Experience</strong></p>
+        <!-- Drinks -->
+        <div class="menu-category d-none" id="drink">
+          <div class="row">
+            <!-- LEFT COLUMN -->
+            <div class="col-md-6 animate-left">
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/lassi.png" />
+                <div class="ml-3">
+                  <h5>Sweet Lassi</h5>
+                  <p>Refreshing yogurt-based drink with sugar.</p>
+                </div>
+                <div class="ml-auto price">₹45</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/falooda.png" />
+                <div class="ml-3">
+                  <h5>Falooda</h5>
+                  <p>Citrus blend perfect for summer thirst.</p>
+                </div>
+                <div class="ml-auto price">₹70</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/mango.png" />
+                <div class="ml-3">
+                  <h5>Mango Shake</h5>
+                  <p>Chilled shake made from real mango pulp.</p>
+                </div>
+                <div class="ml-auto price">₹60</div>
+              </div>
             </div>
-            <div class="col-6">
-              <h3 class="text-warning font-weight-bold">50</h3>
-              <p>Popular <strong>Master Chefs</strong></p>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-md-6 animate-right">
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/cofee.png" />
+                <div class="ml-3">
+                  <h5>Cold Coffee</h5>
+                  <p>Iced coffee with creamy milk & a shot of espresso.</p>
+                </div>
+                <div class="ml-auto price">₹70</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/cpacinnoo.png" />
+                <div class="ml-3">
+                  <h5>Cappuccino</h5>
+                  <p>
+                    "A rich espresso topped with frothy steamed milk and a
+                    dusting of cocoa."
+                  </p>
+                </div>
+                <div class="ml-auto price">₹25</div>
+              </div>
+
+              <div class="menu-item d-flex align-items-center mb-4">
+                <img src="./Assets/chai.png" />
+                <div class="ml-3">
+                  <h5>Masala Chai</h5>
+                  <p>Spiced Indian tea with milk and sugar.</p>
+                </div>
+                <div class="ml-auto price">₹20</div>
+              </div>
             </div>
           </div>
-          <a href="book.html" class="btn btn-warning text-white mt-3">Read More</a>
         </div>
       </div>
-    </div>
-  </section>
-  <!--Team Members Section-->
-  <section class="team-section py-5">
-  <div class="container text-center">
-    <p class="section-subtitle">Team Members</p>
-    <h2 class="section-title mb-5">Our Master Chefs</h2>
+    </section>
 
-    <div class="row">
-     
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="team-card">
-          <img src="./Assets/chef-1.png" alt="Chef 1" class="chef-img">
-          <h5 class="mt-3">Chef Devon</h5>
-          <p class="text-muted">Head Chef</p>
+    <!-- Services Section -->
+    <section class="py-5 bg-light" id="services">
+      <div class="container">
+        <h2 class="text-center mb-5 font-weight-bold" style="font-size: 40px">
+          Our Services
+        </h2>
+        <div class="row">
+          <!-- Service Card -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm p-4 h-100 service-card">
+              <i class="fas fa-user-tie fa-3x text-warning mb-3"></i>
+              <h5 class="font-weight-bold">Master Chefs</h5>
+              <p class="text-muted">
+                Our expert chefs craft unforgettable dishes with passion and
+                perfection.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm p-4 h-100 service-card">
+              <i class="fas fa-utensils fa-3x text-warning mb-3"></i>
+              <h5 class="font-weight-bold">Quality Food</h5>
+              <p class="text-muted">
+                We serve fresh, hygienic, and top-quality food for every taste.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm p-4 h-100 service-card">
+              <i class="fas fa-shopping-cart fa-3x text-warning mb-3"></i>
+              <h5 class="font-weight-bold">Online Order</h5>
+              <p class="text-muted">
+                Order your favorite meals online and enjoy doorstep delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card text-center shadow-sm p-4 h-100 service-card">
+              <i class="fas fa-headset fa-3x text-warning mb-3"></i>
+              <h5 class="font-weight-bold">24/7 Service</h5>
+              <p class="text-muted">
+                We are here round the clock to serve you with the best service.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="team-card">
-          <img src="./Assets/chef-2.png" alt="Chef 2" class="chef-img">
-          <h5 class="mt-3">Chef Lille</h5>
-          <p class="text-muted">Pastry Expert</p>
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Images -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="row">
+              <div class="col-6 pr-2">
+                <img src="./Assets/dining1.jpeg" class="img-fluid mb-3" />
+                <img src="./Assets/person1.jpg" class="img-fluid" />
+              </div>
+              <div class="col-6 pl-2">
+                <img src="./Assets/dining2.jpeg" class="img-fluid mb-3" />
+                <img src="./Assets/person2.jpg" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-md-6">
+            <h5 class="text-warning" style="font-size: 25px">About Us</h5>
+            <h2 class="font-weight-bold mb-4">
+              Welcome to
+              <i class="fas fa-utensils text-warning"></i> RestroRelief
+            </h2>
+            <p class="text-muted">
+              At RestroRelief, we believe food is more than just a meal — it's a
+              heartfelt experience. From the moment you walk through our doors,
+              you're not just a guest; you're family. Our chefs craft every dish
+              with passion, using the finest ingredients and traditional flavors
+              to create memories that linger long after the last bite.
+            </p>
+            <p class="text-muted">
+              Whether it's a cozy breakfast, a joyful family dinner, or a
+              special celebration, RestroRelief is your comforting escape where
+              taste meets tradition.
+            </p>
+            <div class="row mt-4">
+              <div class="col-6">
+                <h3 class="text-warning font-weight-bold">15</h3>
+                <p>Years of <strong>Experience</strong></p>
+              </div>
+              <div class="col-6">
+                <h3 class="text-warning font-weight-bold">50</h3>
+                <p>Popular <strong>Master Chefs</strong></p>
+              </div>
+            </div>
+            <a href="book.html" class="btn btn-warning text-white mt-3"
+              >Read More</a
+            >
+          </div>
         </div>
       </div>
+    </section>
+    <!--Team Members Section-->
+    <section class="team-section py-5">
+      <div class="container text-center">
+        <p class="section-subtitle">Team Members</p>
+        <h2 class="section-title mb-5">Our Master Chefs</h2>
 
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="team-card">
-          <img src="./Assets/chef-3.png" alt="Chef 3" class="chef-img">
-          <h5 class="mt-3">Chef Paul</h5>
-          <p class="text-muted">Culinary Artist</p>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-card">
+              <img src="./Assets/chef-1.png" alt="Chef 1" class="chef-img" />
+              <h5 class="mt-3">Chef Devon</h5>
+              <p class="text-muted">Head Chef</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-card">
+              <img src="./Assets/chef-2.png" alt="Chef 2" class="chef-img" />
+              <h5 class="mt-3">Chef Lille</h5>
+              <p class="text-muted">Pastry Expert</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-card">
+              <img src="./Assets/chef-3.png" alt="Chef 3" class="chef-img" />
+              <h5 class="mt-3">Chef Paul</h5>
+              <p class="text-muted">Culinary Artist</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-card">
+              <img src="./Assets/chef-4.png" alt="Chef 4" class="chef-img" />
+              <h5 class="mt-3">Chef Chim</h5>
+              <p class="text-muted">Grill Specialist</p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
- 
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="team-card">
-          <img src="./Assets/chef-4.png" alt="Chef 4" class="chef-img">
-          <h5 class="mt-3">Chef Chim</h5>
-          <p class="text-muted">Grill Specialist</p>
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section py-5">
+      <div class="booking-container row">
+        <!-- Left: Playable Video -->
+        <div class="video-box col-md-6">
+          <video controls autoplay muted>
+            <source src="./Assets/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-  <!-- Booking Section -->
-<section id="booking" class="booking-section py-5">
-
-  <div class="booking-container row">
-
-    <!-- Left: Playable Video -->
-    <div class="video-box col-md-6">
-      <video controls autoplay muted>
-        <source src="./Assets/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <!-- Right: Booking Form -->
-    <div class="form-box text-center col-md-6">
-      <h4 class="subheading text-light">Reservation</h4>
-      <h2 class="heading">Book A Table Online</h2>
-      <form id="bookingform">
+        <!-- Right: Booking Form -->
+        <div class="form-box text-center col-md-6">
+          <h4 class="subheading text-light">Reservation</h4>
+          <h2 class="heading">Book A Table Online</h2>
+          <form id="bookingform">
             <input type="text" id="name" placeholder="Your Name" required />
             <input type="email" id="email" placeholder="Your Email" required />
             <input type="datetime-local" id="datetime" required />
@@ -575,147 +672,211 @@
             </select>
             <textarea id="request" placeholder="Special Request"></textarea>
             <button type="submit">BOOK NOW</button>
-    </form>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Contact Section -->
- <section id="contact" class="contact-section py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h5 style="font-size: 40px; color:rgb(192, 187, 187); font-weight: bolder;">Contact Us</h5>
-        <h2 class="fw-bold text-warning">Contact For Any Query</h2>
-      </div>
-
-      <!-- Info Boxes -->
-      <div class="row justify-content-center mb-4">
-        <div class="col-md-4 mb-3">
-          <div class="contact-box p-3 shadow-sm">
-            <h5 class="contact-label font-weight-bold text-dark">Booking</h5>
-            <p><i class="fas fa-envelope text-warning mr-2"></i> book@restrorelief.com</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="contact-box p-3 shadow-sm">
-            <h5 class="contact-label font-weight-bold text-dark">General</h5>
-            <p><i class="fas fa-envelope text-warning mr-2"></i> info@restrorelief.com</p>
-          </div>
+          </form>
         </div>
       </div>
+    </section>
 
-     
-      <div class="row align-items-center">
-        <div class=" col-md-6 mb-4 h-50 d-flex justify-content-center align-items-center">
-          <div class=" carousel-box p-4 rounded shadow h-100">
-            <h4 class="text-warning font-weight-bold mb-4 text-center">What Our Customers Say</h4>
-            <div id="Carousel" class="carousel slide" data-ride="carousel" >
-              <div class="carousel-inner text-light text-center" id="Customers-feed">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h5
+            style="
+              font-size: 40px;
+              color: rgb(192, 187, 187);
+              font-weight: bolder;
+            "
+          >
+            Contact Us
+          </h5>
+          <h2 class="fw-bold text-warning">Contact For Any Query</h2>
+        </div>
 
-                <div class="carousel-item active">
-                  <p><i class="fas fa-quote-left text-warning mr-2"></i> Absolutely loved the food and ambiance. Will come back soon!</p>
-                  <small class="text-light" style="font-size: 20px;">—  Priya S. —</small>
-                </div>
-
-                <div class="carousel-item">
-                  <p><i class="fas fa-quote-left text-warning mr-2"></i> Booking was super easy and quick. 5 stars service!</p>
-                  <small class="text-light" style="font-size: 20px;">—  Arjun K. —</small>
-                </div>
-
-                <div class="carousel-item">
-                  <p><i class="fas fa-quote-left text-warning mr-2"></i> Great staff and amazing food. Highly recommended!</p>
-                  <small class="text-light" style="font-size: 20px;">—  Sneha R. —</small>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="carousel-control-prev" href="#Carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon bg-warning rounded-circle" aria-hidden="true"></span>
-              </a>
-              <a class="carousel-control-next" href="#Carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon bg-warning rounded-circle" aria-hidden="true"></span>
-              </a>
+        <!-- Info Boxes -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-4 mb-3">
+            <div class="contact-box p-3 shadow-sm">
+              <h5 class="contact-label font-weight-bold text-dark">Booking</h5>
+              <p>
+                <i class="fas fa-envelope text-warning mr-2"></i>
+                book@restrorelief.com
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="contact-box p-3 shadow-sm">
+              <h5 class="contact-label font-weight-bold text-dark">General</h5>
+              <p>
+                <i class="fas fa-envelope text-warning mr-2"></i>
+                info@restrorelief.com
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Right: Feedback Form -->
-        <div class="col-md-6 mb-4">
-          <div class="contact-form p-4 bg-dark text-light rounded shadow">
-            <h3 class="text-center mb-4 text-warning">We Value Your Feedback</h3>
-            <form id="feedback">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control" required>
-              </div>
+        <div class="row align-items-center">
+          <div
+            class="col-md-6 mb-4 h-50 d-flex justify-content-center align-items-center"
+          >
+            <div class="carousel-box p-4 rounded shadow h-100">
+              <h4 class="text-warning font-weight-bold mb-4 text-center">
+                What Our Customers Say
+              </h4>
+              <div id="Carousel" class="carousel slide" data-ride="carousel">
+                <div
+                  class="carousel-inner text-light text-center"
+                  id="Customers-feed"
+                >
+                  <div class="carousel-item active">
+                    <p>
+                      <i class="fas fa-quote-left text-warning mr-2"></i>
+                      Absolutely loved the food and ambiance. Will come back
+                      soon!
+                    </p>
+                    <small class="text-light" style="font-size: 20px"
+                      >— Priya S. —</small
+                    >
+                  </div>
 
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" class="form-control" required>
-              </div>
+                  <div class="carousel-item">
+                    <p>
+                      <i class="fas fa-quote-left text-warning mr-2"></i>
+                      Booking was super easy and quick. 5 stars service!
+                    </p>
+                    <small class="text-light" style="font-size: 20px"
+                      >— Arjun K. —</small
+                    >
+                  </div>
 
-              <div class="form-group">
-                <label for="rating">Rating</label>
-                <select  id="rating" class="form-control" required>
-                  <option disabled selected >Choose</option>
-                  <option>1 - Poor</option>
-                  <option>3 - Good</option>
-                  <option>4 - Very Good</option>
-                  <option>5 - Excellent</option>
-                </select>
-              </div>
+                  <div class="carousel-item">
+                    <p>
+                      <i class="fas fa-quote-left text-warning mr-2"></i> Great
+                      staff and amazing food. Highly recommended!
+                    </p>
+                    <small class="text-light" style="font-size: 20px"
+                      >— Sneha R. —</small
+                    >
+                  </div>
+                </div>
 
-              <div class="form-group">
-                <label for="message">Your Feedback</label>
-                <textarea id="message" rows="4" class="form-control" required></textarea>
+                <!-- Controls -->
+                <a
+                  class="carousel-control-prev"
+                  href="#Carousel"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon bg-warning rounded-circle"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#Carousel"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon bg-warning rounded-circle"
+                    aria-hidden="true"
+                  ></span>
+                </a>
               </div>
+            </div>
+          </div>
 
-              <button type="submit" class="btn btn-warning btn-block">Submit Feedback</button>
-            </form>
+          <!-- Right: Feedback Form -->
+          <div class="col-md-6 mb-4">
+            <div class="contact-form p-4 bg-dark text-light rounded shadow">
+              <h3 class="text-center mb-4 text-warning">
+                We Value Your Feedback
+              </h3>
+              <form id="feedback">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="rating">Rating</label>
+                  <select id="rating" class="form-control" required>
+                    <option disabled selected>Choose</option>
+                    <option>1 - Poor</option>
+                    <option>3 - Good</option>
+                    <option>4 - Very Good</option>
+                    <option>5 - Excellent</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Your Feedback</label>
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="form-control"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-warning btn-block">
+                  Submit Feedback
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light pt-5 pb-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-3 text-center text-md-left">
-          <img src="./Assets/port.png" width="80" height="80" alt="logo">
-          <h5 class="mt-2 text-warning">RestroRelief</h5>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5 class="text-warning">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#about" class="text-light">About Us</a></li>
-            <li><a href="#contact" class="text-light">Contact Us</a></li>
-            <li><a href="#booking" class="text-light">Reservation</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5 class="text-warning">Contact</h5>
-          <p><i class="fas fa-map-marker-alt"></i> Nandanvan, Nagpur</p>
-          <p><i class="fas fa-envelope"></i> restrorelief@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 9234567819</p>
-          <div>
-            <a href="#"><i class="fab fa-twitter text-light mr-3"></i></a>
-            <a href="#"><i class="fab fa-facebook text-light mr-3"></i></a>
-            <a href="#"><i class="fab fa-youtube text-light"></i></a>
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 text-center text-md-left">
+            <img src="./Assets/port.png" width="80" height="80" alt="logo" />
+            <h5 class="mt-2 text-warning">RestroRelief</h5>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="text-warning">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="text-light">About Us</a></li>
+              <li><a href="#contact" class="text-light">Contact Us</a></li>
+              <li><a href="#booking" class="text-light">Reservation</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="text-warning">Contact</h5>
+            <p><i class="fas fa-map-marker-alt"></i> Nandanvan, Nagpur</p>
+            <p><i class="fas fa-envelope"></i> restrorelief@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9234567819</p>
+            <div>
+              <a href="#"><i class="fab fa-twitter text-light mr-3"></i></a>
+              <a href="#"><i class="fab fa-facebook text-light mr-3"></i></a>
+              <a href="#"><i class="fab fa-youtube text-light"></i></a>
+            </div>
           </div>
         </div>
+        <hr class="bg-light" />
+        <p class="text-center mb-0">2025 RestroRelief. All rights reserved.</p>
       </div>
-      <hr class="bg-light">
-      <p class="text-center mb-0">2025 RestroRelief. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
