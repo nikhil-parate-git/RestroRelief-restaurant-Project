@@ -10,6 +10,7 @@ body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   padding-top: 50px; 
+  
 }
 
 /* SECTION HEIGHT FIXES */
@@ -542,4 +543,8 @@ footer i {
     width: 200px;
     height: 200px;
   }
+}
+
+section {
+  scroll-margin-top: 80px; 
 }
