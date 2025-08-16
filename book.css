@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+.booking-section {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+
+.booking-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video */
+.video-box video {
+  width: 100%;
+  height: 350px;            
+  max-width: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px;
+}
+
+/* Form */
+.form-box {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px;
+
+}
+
+.subheading {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f8b943;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-color: rgba(208, 250, 246, 0.897);
+  border-radius: 8px;
+  background: #333;
+  color:#fff;
+  font-size: 16px;
+}
+
+form .row {
+  display: flex;
+  gap: 10px;
+}
+
+form .row input,
+form .row select {
+  flex: 1;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background-color: orange;
+  color: #000;
+  font-weight: bold;
+  font-size:20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+}
+
+form button:hover {
+  background-color: #ff8c00;
+}

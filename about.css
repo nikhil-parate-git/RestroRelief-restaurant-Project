@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+.about-section {
+  background-color: #f8f9fa;
+}
+
+.about-section h2 {
+  font-size: 40px;
+}
+
+.about-section p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.about-section .my-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+.section-subtitle {
+  font-family:'Times New Roman', Times, serif;
+  color: orange;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+}
+.team-section{
+    background-color: #f8f9fa; 
+}
+.team-card {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.chef-img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}

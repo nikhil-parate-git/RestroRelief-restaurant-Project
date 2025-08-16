@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+}
+.menu-section{
+  background-image: url("./Assets/menu-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.menu-section h2 {
+  font-weight: bold;
+  color:brown;
+  font-size: 50px;
+}
+
+
+.menu-tabs button {
+  background: none;
+  border: none;
+  font-weight:bold;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color:#000;
+}
+
+.menu-tabs .tab.active {
+  color: #e85d04;
+}
+.tab {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #e85d04;
+}
+
+.tab.active {
+  color: white;
+}
+.menu-item {
+  background:white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.40);
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-item h5 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.menu-item p {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  color: #da5503;
+  font-size: 18px;
+}
+@media (max-width: 420px) {
+  .menu-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Menu animations*/
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease-in-out;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaraunt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <img src="./Assets/port.png" height="80" width="80"  />
+        <span style="font-size:30px; color: orange;">RestroRelief</span>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto align-items-lg-center text-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link" style="color: white;" href="./index.html">HOME</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" style="color: white;" href="./menu.html">MENU</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" style="color: white;" href="./service.html">SERVICE</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" style="color: white;" href="./about.html">ABOUT</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" style="color: white;" href="./contact.html">CONTACT</a>
+          </li>
+
+          <li class="nav-item mx-2">
+            <a href="./contact.html" class="btn my-btn font-weight-bold">BOOK TABLE</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="menu-section py-5 ">
+    <div class="container ">
+      <h2 class="text-center mb-3 ">Our Menu </h2>
+    <h4 class="font-weight-bold text-center" style="font-size: 25px;">“We don't just serve meals, we serve moments.”</h4>
+    <p class=" text-center"  style="font-size: 21px;">"More than a meal — it's a memory in the making."</p>
+
+      <!-- Rountine-Tabs -->
+       <div class="menu-tabs text-center my-3 d-flex flex-wrap justify-content-center gap-4">
+        <button class="tab active" onclick="showMenu('breakfast')">
+            <i class="fas fa-mug-hot"></i> Popular Breakfast</button>
+        <button class="tab" onclick="showMenu('lunch')">
+            <i class="fas fa-hamburger"></i> Special Lunch</button>
+        <button class="tab" onclick="showMenu('dinner')"> 
+            <i class="fas fa-utensils"></i> Lovely Dinner</button>
+        <button class="tab" onclick="showMenu('desserts')"> 
+           <i class="fas fa-cookie"></i>Sweet Desserts</button>
+        <button class="tab" onclick="showMenu('drink')"> 
+             <i class="fas fa-cocktail"></i>Chill Drinks</button>
+      </div>
+
+      <div id="menu-items">
+        <!-- Breakfast -->
+     <div class="menu-category" id="breakfast">
+     <div class="row">
+    <!-- Left Column -->
+    <div class="col-md-6 animate-left">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="./Assets/idli.png" >
+        <div class="ml-3">
+          <h5>Idli Sambhar</h5>
+          <p>Soft steamed rice cakes with sambhar.</p>
+        </div>
+        <div class="ml-auto price">₹60</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="./Assets/poha.png">
+        <div class="ml-3">
+          <h5>Poha</h5>
+          <p>Flattened rice with peanuts & spices.</p>
+        </div>
+        <div class="ml-auto price">₹40</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/aloo paratha.png" >
+        <div class="ml-3">
+          <h5>Aloo Paratha</h5>
+          <p>Stuffed bread with potato filling.</p>
+        </div>
+        <div class="ml-auto price">₹50</div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-6 animate-right">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="./Assets/noodles.png" >
+        <div class="ml-3">
+          <h5>Noodles</h5>
+          <p>Spicy and yuppie Noodles.</p>
+        </div>
+        <div class="ml-auto price">₹45</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/dosa5.png">
+        <div class="ml-3">
+          <h5>Masala Dosa</h5>
+          <p>Crispy rice crepe with potato filling.</p>
+        </div>
+        <div class="ml-auto price">₹80</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/sandwh.png" >
+        <div class="ml-3">
+          <h5>Veg Sandwich</h5>
+          <p>Grilled sandwich with fresh veggies.</p>
+        </div>
+        <div class="ml-auto price">₹55</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Lunch -->
+    <div class="menu-category d-none" id="lunch">
+  <div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="col-md-6 animate-left">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/rajma.png">
+        <div class="ml-3">
+          <h5>Rajma Chawal</h5>
+          <p>Kidney beans curry with rice.</p>
+        </div>
+        <div class="ml-auto price">₹120</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/thali.png" >
+        <div class="ml-3">
+          <h5>Veg Thali</h5>
+          <p>Full meal with roti, sabzi, dal & dessert.</p>
+        </div>
+        <div class="ml-auto price">₹180</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/veg biryani.png">
+        <div class="ml-3">
+          <h5>Veg Biryani</h5>
+          <p>Spicy rice with vegetables and masala.</p>
+        </div>
+        <div class="ml-auto price">₹130</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-md-6 animate-right">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/momo.png" >
+        <div class="ml-3">
+          <h5>Momos</h5>
+          <p>"Steamed dumplings packed with spicy flavors, served with a fiery chutney."</p>
+        </div>
+        <div class="ml-auto price">₹160</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/bhtuee.png" >
+        <div class="ml-3">
+          <h5>Chole Bhature</h5>
+          <p>Spicy chickpeas with fluffy fried bread.</p>
+        </div>
+        <div class="ml-auto price">₹110</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/bhaji.png" >
+        <div class="ml-3">
+          <h5>Pav Bhaji</h5>
+          <p>PaV With spicy gravy .</p>
+        </div>
+        <div class="ml-auto price">₹140</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Dinner -->
+     <div class="menu-category d-none" id="dinner">
+     <div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="col-md-6 animate-left">
+    <div class="menu-item d-flex align-items-center mb-4">
+    <img src="assets/paneer.png" >
+        <div class="ml-3">
+           <h5>Paneer Butter Masala</h5>
+          <p>Creamy curry served with naan or rice.</p>
+        </div>
+        <div class="ml-auto price">₹110</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/thali.png" >
+        <div class="ml-3">
+          <h5>Veg Thali</h5>
+          <p>Full meal with roti, sabzi, dal & dessert.</p>
+        </div>
+        <div class="ml-auto price">₹40</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/kulcha.png" >
+        <div class="ml-3">
+          <h5>Chola Kulcha</h5>
+          <p>"Soft kulchas served with spicy, tangy chole for the perfect North Indian delight.<p>
+        </div>
+        <div class="ml-auto price">₹150</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-md-6 animate-right">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/rice.avif">
+        <div class="ml-3">
+          <h5>Veg Fried Rice With Manchurian</h5>
+          <p>Chinese-style rice with veggies and soy.</p>
+        </div>
+        <div class="ml-auto price">₹150</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/hakka.png" alt="Hakka Noodles">
+        <div class="ml-3">
+          <h5>Hakka Noodles</h5>
+          <p>Spicy stir-fried noodles with sauces.</p>
+        </div>
+        <div class="ml-auto price">₹95</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/dal and rice.png">
+        <div class="ml-3">
+          <h5>Dal and Rice</h5>
+          <p>"Comforting yellow dal served with steamed basmati rice - a simple yet soulful meal.".</p>
+        </div>
+        <div class="ml-auto price">₹50</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+              <!-- Desserts -->
+<div class="menu-category d-none" id="desserts">
+  <div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="col-md-6 animate-left">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/jamun.png">
+        <div class="ml-3">
+          <h5>Gulab Jamun</h5>
+          <p>Soft and sweet milk-solid balls soaked in syrup.</p>
+        </div>
+        <div class="ml-auto price">₹60</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/rasgulla.png">
+        <div class="ml-3">
+          <h5>Rasgulla</h5>
+          <p>Spongy white balls dipped in sugary syrup.</p>
+        </div>
+        <div class="ml-auto price">₹50</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/cream.png">
+        <div class="ml-3">
+          <h5>Ice Cream</h5>
+          <p>Chilled scoop of your favorite flavor.</p>
+        </div>
+        <div class="ml-auto price">₹30</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-md-6 animate-right">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/cake.png">
+        <div class="ml-3">
+          <h5>Choco Lava Cake</h5>
+          <p>Rich layered cake with creamy chocolate frosting.</p>
+        </div>
+        <div class="ml-auto price">₹70</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/kulfi.png">
+        <div class="ml-3">
+          <h5>Kulfi</h5>
+          <p>Traditional Indian ice cream in malai or pista flavors.</p>
+        </div>
+        <div class="ml-auto price">₹50</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/rasmala.png">
+        <div class="ml-3">
+          <h5>Rasmalai</h5>
+          <p>"Soft cottage cheese discs soaked in rich saffron-infused milk,topped with nuts."p>
+        </div>
+        <div class="ml-auto price">₹100</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+              <!-- Drinks -->
+    <div class="menu-category d-none" id="drink">
+    <div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="col-md-6 animate-left">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/lassi.png">
+        <div class="ml-3">
+          <h5>Sweet Lassi</h5>
+          <p>Refreshing yogurt-based drink with sugar.</p>
+        </div>
+        <div class="ml-auto price">₹45</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/falooda.png">
+        <div class="ml-3">
+          <h5>Falooda</h5>
+          <p>Citrus blend perfect for summer thirst.</p>
+        </div>
+        <div class="ml-auto price">₹70</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/mango.png">
+        <div class="ml-3">
+          <h5>Mango Shake</h5>
+          <p>Chilled shake made from real mango pulp.</p>
+        </div>
+        <div class="ml-auto price">₹60</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-md-6 animate-right">
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/cofee.png">
+        <div class="ml-3">
+          <h5>Cold Coffee</h5>
+          <p>Iced coffee with creamy milk & a shot of espresso.</p>
+        </div>
+        <div class="ml-auto price">₹70</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/cpacinnoo.png">
+        <div class="ml-3">
+          <h5>Cappuccino</h5>
+          <p>"A rich espresso topped with frothy steamed milk and a dusting of cocoa."</p>
+        </div>
+        <div class="ml-auto price">₹25</div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-4">
+        <img src="assets/chai.png">
+        <div class="ml-3">
+          <h5>Masala Chai</h5>
+          <p>Spiced Indian tea with milk and sugar.</p>
+        </div>
+        <div class="ml-auto price">₹20</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+ <div id="footer"></div>
+<script src="script.js"></script>
+<link rel="stylesheet" href="footer.css">
+</body>
+</html>

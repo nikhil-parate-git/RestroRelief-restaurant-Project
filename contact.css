@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.contact-section {
+  background-image: url("./Assets/contact.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-box{
+  max-width: 1000px;
+  background-image: url(./Assets/review.jpg);
+  background-position:center;
+  background-size: cover;
+}
+.carousel-item p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.carousel-item small {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Contact Info Boxes */
+.contact-box {
+  padding: 20px;
+  background: rgb(192, 187, 187);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+}
+
+.contact-label {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.contact-label::after {
+  content: '';
+  height: 2px;
+  width: 40px;
+  background: orange;
+  display: block;
+  margin: 5px auto 0;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #000;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #e6f8bb;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form button {
+  background-color: #f5c542;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+}
+
