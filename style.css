@@ -6,30 +6,29 @@
 
 body, html {
   width: 100%;
-  min-height: 100vh; /* Changed from height: 100% */
+  min-height: 100vh; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   padding-top: 50px; 
   
 }
 
-/* SECTION HEIGHT FIXES */
+
 #services,
 #about,
 #contact,
 #booking {
-  min-height: 100vh; /* Added this line */
-  display: flex; /* Added for content centering */
-  align-items: center; /* Added for vertical centering */
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
 }
 
-/* Original section padding modified */
+
 section {
   padding: 80px 0;
   width: 100%;
 }
 
-/* Rest of your original CSS remains completely unchanged */
 .navbar {
   width: 100%;
   padding: 10px 30px;
